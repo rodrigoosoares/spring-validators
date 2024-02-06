@@ -1,0 +1,9 @@
+{
+  "name": "Legolas",
+  "healthPoints": 100,
+  "attack": 50,
+  "defense": 30,
+  "stamina": 80,
+  "intelligence": 60,
+  "status": "BAD"
+}

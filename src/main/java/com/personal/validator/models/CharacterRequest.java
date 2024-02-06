@@ -1,7 +1,6 @@
 package com.personal.validator.models;
 
-import com.personal.validator.validators.ValidEnum;
-import jakarta.validation.Valid;
+import com.personal.validator.valiations.ValidStatus;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -27,7 +26,7 @@ public record CharacterRequest(
         @Min(0)
         Long intelligence,
 
-        @ValidEnum(value = Status.class)
+        @ValidStatus
         String status
 ) {
 }

@@ -1,0 +1,7 @@
+{
+  "code": 499359526,
+  "message": "Bad Request",
+  "errors": [
+    "status: 'BAD' is not a valid value. Possible values are: [HEALTH, POISONED, HUNGRY, TIRED, FREEZE]"
+  ]
+}

@@ -27,13 +27,13 @@ public class CharacterController {
     }
 
     @PostMapping
-    public ResponseEntity<Long> createCharacter(@RequestBody @Valid final CharacterRequest characterRequest) {
+    public ResponseEntity<CharacterCreationResponse> createCharacter(@RequestBody @Valid final CharacterRequest characterRequest) {
 
         final Character character = characterRequestToCharacterConverter.convert(characterRequest);
 
         final Long createdCharacterId = characterService.createCharacter(character);
 
-        return ResponseEntity.ok(createdCharacterId);
+        return ResponseEntity.ok(new CharacterCreationResponse(createdCharacterId));
     }
 
 }

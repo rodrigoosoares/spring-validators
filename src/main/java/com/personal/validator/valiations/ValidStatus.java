@@ -1,4 +1,4 @@
-package com.personal.validator.validators;
+package com.personal.validator.valiations;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
@@ -8,17 +8,15 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Constraint(validatedBy = EnumValidator.class)
+@Constraint(validatedBy = StatusValidator.class)
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface ValidEnum {
+public @interface ValidStatus {
 
-    String message() default "bla";
+    String message() default "";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
-
-    Class<? extends Enum<?>> value();
 
 }
